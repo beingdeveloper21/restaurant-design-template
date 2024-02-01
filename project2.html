@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>THE CABANNA</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Slabo+27px&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bree+Serif&family=Slabo+27px&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+        rel="stylesheet">
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+        html{
+            scroll-behavior: smooth;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: rgb(197, 170, 106);
+            height: 80px;
+            list-style: none;
+        }
+
+        .menu {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            list-style: none;
+        }
+
+        .box {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            right: 160px;
+        }
+
+        .menu li a {
+            text-decoration: none;
+            padding: 4px 18px;
+            color: black;
+            font-size: 18px;
+            font-family: "Slabo 27px", serif;
+            font-weight: 400;
+            font-style: normal;
+        }
+
+        .menu a:hover {
+            cursor: pointer;
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .box img {
+            height: 80px;
+        }
+
+        #home {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 35px;
+        }
+
+        h1,
+        p {
+            text-align: center;
+        }
+
+        p {
+            font-size: 25px;
+            padding-top: 28px;
+            font-family: "Ubuntu", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+        }
+
+        h1 {
+            font-size: 30px;
+        }
+
+
+        #home::before {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            content: "";
+            background: url('lop.jpg')no-repeat center center/cover;
+            z-index: -1;
+            opacity: 0.5;
+        }
+
+        .book {
+            padding-top: 125px;
+            text-align: center;
+        }
+
+        .btn {
+            padding: 30px;
+            font-size: 2.5rem;
+            text-align: center;
+            border-radius: 14px;
+            margin: 15px;
+            background-color: rgb(16, 137, 141);
+            position: relative;
+            bottom: 75px;
+            font-family: "Bree Serif", serif;
+            font-weight: 400;
+            font-style: normal;
+
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            padding-top: 20px;
+            position: relative;
+            padding:30px;
+
+        }
+
+        .goal {
+            position: relative;
+            bottom: 60px;
+            font-weight: bolder;
+        }
+
+        input {
+            padding: 15px;
+            border-radius: 15px;
+            width: 300px;
+            margin-bottom: 15.5px;
+            font-family: "Ubuntu", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+        }
+
+        #serve::before {
+            position: absolute;
+            z-index: -1;
+            content: "";
+            height: 100%;
+            width: 100%;
+            background: url('dinein.jpg')no-repeat center center/cover;
+            opacity: 0.8;
+        }
+
+        #serve {
+            position: relative;
+            top: 20px;
+        }
+
+        footer {
+            height: 58px;
+            background-color: black;
+            color: white;
+            text-align: center;
+            padding: 5px 10px;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            top: 20px;
+        }
+
+        .time {
+            text-align: right;
+            position: relative;
+            bottom: 20px;
+            font-size: 20px;
+        }
+
+        .start {
+            text-align: left;
+            font-size: 20px;
+        }
+
+        .para {
+            font-size: 18px;
+        }
+
+        .contact::before {
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            background: url('final.jpg')no-repeat center center/cover;
+            content: "";
+            z-index: -1;
+            opacity: 0.5;
+        }
+
+        .contact {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            height: 200px;
+            position: relative;
+            top: 20px;
+            padding: 50px;
+        }
+
+        h2 {
+
+            font-size: 2rem;
+            color: black;
+            text-align: center;
+        }
+
+        #number {
+            font-size: 30px;
+            padding-bottom: 45px;
+            text-align: center;
+
+        }
+
+        #email {
+            font-size: 25px;
+            padding: 7px;
+            padding-bottom: 37px;
+            text-align: center;
+        }
+
+        #location {
+            padding: 7px;
+            font-size: 30px;
+            text-align: center;
+        }
+
+        .menuof {
+            display: flex;
+            flex-direction: column;
+            height: 1400px;
+            position: relative;
+            top: 20px;
+        }
+
+        .menuof::before {
+            position: absolute;
+            height: 1400px;
+            width: 100%;
+            background: url('loc.jpg')no-repeat center center/cover;
+            content: "";
+            z-index: -1;
+            opacity: 0.8;
+        }
+
+
+        .indian {
+            border: 2px solid black;
+            margin-top: 25px;
+            height: 350px;
+            width: 350px;
+            border-radius: 10px;
+            background-color: grey;
+            margin-left: 450px;
+        }
+
+        .indian img {
+            height: 200px;
+            width: 250px;
+            margin-left: 15px;
+            margin-top: 5px;
+            display: block;
+            margin: auto;
+            border-radius: 3px;
+        }
+
+        .indian p {
+            padding: 25px;
+            color: white;
+            font-size: 25px;
+            font-style: italic;
+            position: relative;
+            bottom: 12px;
+        }
+
+        .italian {
+            border: 2px solid black;
+            margin-top: 25px;
+            height: 350px;
+            width: 350px;
+            border-radius: 10px;
+            background-color: grey;
+        }
+
+        .italian img {
+            height: 200px;
+            width: 250px;
+            margin-left: 15px;
+            margin-top: 5px;
+            display: block;
+            margin: auto;
+            border-radius: 3px;
+        }
+
+        .italian p {
+            padding: 25px;
+            color: white;
+            font-size: 25px;
+            font-style: italic;
+            position: relative;
+            bottom: 12px;
+        }
+
+        .continent {
+            border: 2px solid black;
+            margin-top: 25px;
+            height: 350px;
+            width: 350px;
+            border-radius: 10px;
+            background-color: grey;
+        }
+
+        .continent img {
+            height: 200px;
+            width: 250px;
+            margin-left: 15px;
+            margin-top: 5px;
+            display: block;
+            margin: auto;
+            border-radius: 3px;
+        }
+
+        .continent p {
+            padding: 25px;
+            color: white;
+            font-size: 25px;
+            font-style: italic;
+            position: relative;
+            bottom: 12px;
+        }
+
+        .box {
+            display: flex;
+            flex-direction: row;
+            margin-left: 300px;
+        }
+
+
+        #me {
+            font-style: bold;
+            color: black;
+            text-align: center;
+            padding-bottom: 80px;
+            font-size: 4rem;
+            position: relative;
+            top: 50px;
+        }
+
+        .life {
+            margin-top: 30px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <div class="box">
+            <img src="log.png" alt="THECABANNA.com">
+            <h2>THE CABANNA </h2>
+        </div>
+        <ul class="menu">
+            <li><a href="#home">HOME</a></li>
+            <li><a href="#serve">ABOUT</a></li>
+            <li><a href="#me">SERVICES</a></li>
+            <li><a href="#last">CONTACT US</a></li>
+        </ul>
+    </nav>
+    <div id="home">
+        <h1>CABANNA:A MULTI CUISINE RESTAURANT</h1>
+        <section>
+            <p>At CABANNA diverse culinary traditions converge to create a delightful and harmonious dining experience.
+                From savory
+                appetizers to mouthwatering main courses and decadent desserts, our menu is a celebration of global
+                gastronomy.Whether you crave the spices of Asia, the comfort of European classics, or the boldness of
+                Latin American cuisine, "CABANNA" promises a vibrant and satisfying adventure for every palate.
+            <p>
+                Join us for a dining experience that transcends borders, offering a taste of the world's finest cuisines
+                in every delectable bite.</p>
+        </section>
+    </div>
+    <div id="serve">
+        <div class="book">
+            <button class="btn">BOOK A TABLE</button>
+        </div>
+        <div class="goal">
+            <form action="backend.php">
+                <label for="name">NAME:</label>
+                <input type="text" id="name" placeholder="Enter your name">
+                <label for="person">MOBILE NUMBER:</label>
+                <input type="number" id="person" placeholder="Enter your mobile no.">
+                <label for="size">SIZE:</label>
+                <input type="number" id="size" placeholder="No. of  members you want to book for">
+                <label for="contact">EMAIL ID:</label>
+                <input type="email" id="contact" placeholder="Enter your e-mail id">
+                <label for="date">BOOKING DATE:</label>
+                <input type="datetime-local" id="date" placeholder="Enter the date you want to book for">
+            </form>
+        </div>
+    </div>
+    <div class="contact">
+        <h2 id="last">CONTACT FOR FUTHER QUERIES</h2>
+        <div id="number">033-6291667964</div>
+        <div id="email">2000cabanna@gmaiL.com</div>
+        <div id="location">KIIT CHOWK,
+            PATIA BHUBANESWAR,751024
+        </div>
+    </div>
+    <div class="menuof">
+        <h2 id="me">MENU</h2>
+        <div class="indian">
+            <p>CABANNA'S UNIQUE</p>
+            <img src="order.jpg" alt="#">
+        </div>
+        <div class="box">
+            <div class="italian">
+                <p>TRY ITALIAN</p>
+                <img src="italian.jpg" alt="#">
+            </div>
+            <div class="continent">
+                <p>GO FOR CONTINENTAL</p>
+                <img src="cont.jpg" alt="#">
+            </div>
+        </div>
+        <div class="indian">
+            <p>DELICIOUS DESERT</p>
+            <img src="cake.jpg" alt="#">
+        </div>
+        <h2 class="life">VISIT US AGAIN</h2>
+    </div>
+    <footer>
+        <span class="start">ESTABLISHED IN 2000</span>
+        <span class="time">OPEN HOURS:MONDAY-SUNDAY 8:00A.M.-9.00P.M.</span>
+        <span class="para">Copyright &copy; THECABANNA.com ALL RIGHTS AND RESRVED</span>
+    </footer>
+</body>
+
+</html>
